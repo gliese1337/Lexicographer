@@ -19,11 +19,11 @@ The "classes" field contains an object whose keys are the names of the lexical c
 
 ##CLASS
 A CLASS object contains the following fields:
-	* "classes"
-    * "features"
-	* "forms"
-	* "rules"
-	* "lemmas"
+* "classes"
+* "features"
+* "forms"
+* "rules"
+* "lemmas"
 	
 ###classes
 The "classes" field within a CLASS object has the same meaning as the top-level "classes" object, and contains descriptions of subclasses, of which there may be zero or more. Any fields of a subclass may be ommitted, in which case values for the omitted fields are determined by examining the ancestor class. The features and forms specified in a subclass description are added to those defined for all ancestor classes to determine the total number of forms and features for that class. Rules and lemmas in ancestor classes are shadowed by rules for the same forms and lemmas specified on subclasses. If subclasses are present, then any member of the parent class *must* be specified for subclass as well; thus, there should be zero, 2, or more subclasses for any given class.
@@ -36,8 +36,8 @@ The "forms" field contains an object whose keys are the names of different morph
 
 ####FORM
 A FORM object contains the following fields:
-    * "class"
-	* "values"
+* "class"
+* "values"
 
 #####class
 The "class" field contains a string which is the name of the lexical class to which this form belongs. For inflected forms, this will likely be the same as the name of the class being described. For derivational forms, it will likely be the name of a different class. To select a particular subclass, periods are used to separate parent and child class names; e.g. "verb.strong".
