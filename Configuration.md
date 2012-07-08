@@ -1,7 +1,7 @@
 Language Configurations
 =============
 
-Language configrations are defined as JSON structures. They may be mapped to YAML or XML equivalents.
+Language configurations are defined as JSON structures. They may be mapped to YAML or XML equivalents.
 
 The top-level of a language configuration is an object containing the following fields:
 * "enumerations"
@@ -46,7 +46,10 @@ The "class" field contains a string which is the name of the lexical class to wh
 The "values" field contains an object whose keys are the names of features of words of the class named by the "class" field, and whose values are taken from the enumerations of possible values defined for the features of that class. Within a "forms" object, all values must be specified for all features that apply to the given class; within a "features" object, only values that must match should be given, and a list may be used to indicate that multiple values are acceptable for a given feature.
 
 ###rules
-The "rules" field contains an object whose keys are the names of forms and whose values are objects whose keys are the names of representations and whose values are rules for generating the given form in the given representation. Within any class, there may be zero or one rules given for any form; however, there must be at least one form with no rule given to indicate the root or principle part of a lexical entry.
+The "rules" field contains an object whose keys are the names of forms and whose values are RULE objects. Within any class, there may be zero or one rules given for any form; however, there must be at least one form with no rule given to indicate the root or principle part of a lexical entry.
+
+####RULE
+A RULE object has fields whose keys are the names of representations and whose values are rules for generating the given form in the given representation. 
 
 ###lemmas
 The "lemmas" field contains a prioritized list of the names of forms to be used as dictionary head words. In the case of a lexical entry witha  defective paradigm for which the most preferred lemma form does not exist, the first form in the "lemmas" list that exists for the given entry will be used to choose the head-word for the entry.
