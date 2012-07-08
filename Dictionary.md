@@ -39,8 +39,8 @@ A WORD object has fields whose keys are the names of representations and whose v
 
 ## etymology
 The "etymology" field may be specified for a LEXEME or for individual word senses. If specified at the LEXEME level, an "etymology" field may not be present on contained definitions. The "etymology" field contains an object with the following fields:
-    * "derivation"
-	* "sources"
+* "derivation"
+* "sources"
 
 ### derivation
 The "derivation" field contains a string describing the type of derivation of the word (e.g., descent from a parent language, borrowing, calquing, compounding, etc.)
@@ -49,8 +49,8 @@ The "derivation" field contains a string describing the type of derivation of th
 The "sources" field contains a list of SOURCE objects describing the source material for the current lexeme 1 step back; in most cases, this will be a list of length 1, but may be longer for cases such as compounding.
 
 A SOURCE object contains the following fields:
-    * "language"
-	* "word"
+* "language"
+* "word"
 
 #### language
 The "language" field is the name of the source language as a string.
@@ -64,18 +64,18 @@ The "notes" field in a LEXEME object contains a NOTE object.
 ## senses
 The "senses" field contains a list of SENSE objects.
 A SENSE object contains the following fields:
-    * "notes"
-	* "etymology"
-	* "definitions"
+* "notes"
+* "etymology"
+* "definitions"
 The "etymology" and "notes" fields are as defined above for LEXEMEs.
 
 ### definitions
 The "definitions" field contains a list of DEFINITION objects.
 A DEFINITION object contains the following fields:
-	* "language"
-	* "correspondence"
-    * "text"
-	* "examples"
+* "language"
+* "correspondence"
+* "text"
+* "examples"
 
 #### language
 The "language" field contains the name of the target language for this definition as a string.
@@ -89,10 +89,10 @@ The "text" field is a string of free-form text describing the definition of the 
 #### examples
 The "examples" field is a list of EXAMPLE objects.
 An EXAMPLE object contains the following fields:
-	* "uri" or "text"
-	* "translation"
-	* "tags"
-	* "media"
+* "uri" or "text"
+* "translation"
+* "tags"
+* "media"
 
 #####uri or text
 The "uri" field, if present, contains a link to an example usage of the lexeme in some corpus. The "text" field, if present, contains a free-form string containing an example of the lexeme's usage.
@@ -106,8 +106,8 @@ The "tags" field contains a set implemented as an arbitrarily ordered list of th
 ##### media
 The "media" field contains a list of MEDIA objects.
 A MEDIA object contains the following fields:
-    * "mime"
-	* "uri"
+* "mime"
+* "uri"
 
 ###### mime
 The "mime" field is the mime-type of the media resource as a string.
